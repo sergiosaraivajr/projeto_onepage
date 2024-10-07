@@ -22,7 +22,7 @@ html, body {
 
 /* Content centralizado com bordas brancas */
 .content {
-    width: 80%; /* Pode ajustar a largura conforme necessário */
+    width: 60%; /* Pode ajustar a largura conforme necessário */
     height: 80%;
     border: 2px solid white; /* Bordas brancas */
     border-radius: 10px; /* Bordas arredondadas, opcional */
@@ -37,7 +37,7 @@ html, body {
 
 /* Left-cards ocupando 80% da largura */
 .left-cards {
-    flex-basis: 80%; /* Define a largura em 80% */
+    flex-basis: 70%; /* Define a largura em 80% */
     height: 100%; /* Ocupa toda a altura disponível */
     border: 2px solid white;
     display: flex;
@@ -47,13 +47,104 @@ html, body {
     .left-superior-card {
         width: 100%;
         height: 60%;
-        border: 2px solid white;
         display: flex;
         gap: 20px;
     
         .card-lf {
             width: 50%;
-            border: 2px solid white;
+            
+
+            .card-cracha {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                position: relative;
+                width: auto;
+                height: 100%;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(15px);
+                box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .img-bx {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: translateY(30px) scale(0.6);
+                transform-origin: top;
+                box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .img-bx img {
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .content-cracha {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding-bottom: 30px;
+            }
+            
+            .content-cracha .detail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .content-cracha .detail h2 {
+                color: #faf7f7;
+                font-size: 1.6em;
+                font-weight: bolder;
+            }
+            
+            .content-cracha .detail h2 span {
+                font-size: 0.7em;
+                color: #03a9f4;
+                font-weight: bold;
+            }
+            
+            .sci {
+                position: relative;
+                display: flex;
+                margin-top: 5px;
+            }
+            
+            .sci li {
+                list-style: none;
+                margin: 12px;
+            }
+            
+            .sci li a {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: transparent;
+                font-size: 2em;
+                color: #faf7f7;
+                text-decoration: none;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                transition: 0.7s;
+            }
+            
+            .sci li a:hover {
+                background: #03a9f4;
+                color: #fff;
+            }
         }
         .card-rg {
             width: 50%;
@@ -66,12 +157,23 @@ html, body {
         height: 40%;
         border: 2px solid white;
         flex-direction: row;
+        display: flex;
+        gap: 20px;
+
+        .inf-card-lf {
+            width: 60%;
+            border: 2px solid white;
+        }
+        .inf-card-rg {
+            width: 40%;
+            border: 2px solid white;
+        }
     }
 }
 
 /* Right-cards ocupando 20% da largura */
 .right-cards {
-    flex-basis: 20%; /* Define a largura em 20% */
+    flex-basis: 30%; /* Define a largura em 20% */
     height: 100%; /* Ocupa toda a altura disponível */
     border: 2px solid white;
     display: flex;

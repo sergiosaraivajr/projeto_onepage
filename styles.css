@@ -1,0 +1,106 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Container ocupa toda a tela */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+/* Content centralizado com bordas brancas */
+.content {
+    width: 80%; /* Pode ajustar a largura conforme necessário */
+    height: 80%;
+    border: 2px solid white; /* Bordas brancas */
+    border-radius: 10px; /* Bordas arredondadas, opcional */
+}
+
+/* Cards organizados em duas colunas */
+.cards {
+    display: flex;
+    gap: 20px;
+    height: 100%; /* Ocupa 100% da altura do content */
+}
+
+/* Left-cards ocupando 80% da largura */
+.left-cards {
+    flex-basis: 80%; /* Define a largura em 80% */
+    height: 100%; /* Ocupa toda a altura disponível */
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .left-superior-card {
+        width: 100%;
+        height: 60%;
+        border: 2px solid white;
+        display: flex;
+        gap: 20px;
+    
+        .card-lf {
+            width: 50%;
+            border: 2px solid white;
+        }
+        .card-rg {
+            width: 50%;
+            border: 2px solid white;
+        }
+    }
+    
+    .left-inferior-card {
+        width: 100%;
+        height: 40%;
+        border: 2px solid white;
+        flex-direction: row;
+    }
+}
+
+/* Right-cards ocupando 20% da largura */
+.right-cards {
+    flex-basis: 20%; /* Define a largura em 20% */
+    height: 100%; /* Ocupa toda a altura disponível */
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .superior-card {  
+        width: 100%;
+        height: 40%;
+        border: 2px solid white;
+        flex-direction: column;
+    }
+    
+    .inferior-card {
+        width: 100%;
+        height: 60%;
+        border: 2px solid white;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Empilha os cartões em telas menores */
+    }
+
+    .left-cards, .right-cards {
+        flex-basis: 100%; /* Ambos os cartões ocupam 100% da largura */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+}
+
